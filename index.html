@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verdulería La Pancho</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>🥬 Verdulería La Pancho</h1>
+
+        <h2>Datos para transferencia</h2>
+
+        <div class="datos">
+
+            <p><strong>Nombre del titular:</strong></p>
+            <p>Juan Carlos Flores</p>
+
+            <p><strong>Número de cuenta:</strong></p>
+            <p id="cuenta">722969011629006466</p>
+
+            <img src="imagen.png" alt="Imagen de pago" class="imagen">
+
+            <button onclick="copiarCuenta()">
+                Copiar número de cuenta
+            </button>
+
+        </div>
+ 
+    </div>
+
+    <script>
+        function copiarCuenta() {
+
+            let cuenta = document.getElementById("cuenta").innerText;
+
+            navigator.clipboard.writeText(cuenta)
+                .then(() => {
+                    alert("Número de cuenta copiado");
+                });
+        }
+    </script>
+
+</body>
+</html>
